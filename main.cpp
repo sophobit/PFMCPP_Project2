@@ -14,15 +14,12 @@ video: Chapter 2 - Part 3
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t)
  put them here: 
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
+int Integer
+float Floating Point
+bool Boolean
+double Double Floating Point
+char Character
+void Valueless
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration function.
     give each declaration an initial value
@@ -54,12 +51,37 @@ video: Chapter 2 - Part 3
 //2)
 void variableDeclarations()
 {
-    //example:
-    int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
+    int number = 2;
+    int speed = 55;
+    int loTemp = 200;
+    float myDecimal = 0.4f;
+    float myGpa = 3.5f;
+    float snowFall = 2.5f;
+    bool rain = true;
+    bool hot = false;
+    bool hungry = true;
+    double pi = 3.14159265359;
+    double pieLength = 4.1113324445662;
+    double endMiles = 2.335544665;
+    char letterOfDay = 'L';
+    char finalGrade = 'B'; 
+    char assessment = '3';
     
-    
-    
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number);
+    ignoreUnused(speed);
+    ignoreUnused(loTemp);
+    ignoreUnused(myDecimal);
+    ignoreUnused(myGpa);
+    ignoreUnused(snowFall);
+    ignoreUnused(rain);
+    ignoreUnused(hot);
+    ignoreUnused(hungry);
+    ignoreUnused(pi);
+    ignoreUnused(pieLength);
+    ignoreUnused(endMiles);
+    ignoreUnused(letterOfDay);
+    ignoreUnused(finalGrade);
+    ignoreUnused(assessment);
 }
 /*
  10 functions
@@ -74,42 +96,82 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+int gps(int miles, char direction = 'W')
+{ 
+    ignoreUnused(miles, direction);
+    return {};
+} 
 /*
  2)
  */
-
+bool choiceToMake(int min = 0, int effort = 0)
+{
+    ignoreUnused(min, effort);
+    return {};
+}
 /*
  3)
  */
-
+float recipeConverter(float originalAmt, float neededAmt)
+{
+    ignoreUnused(originalAmt, neededAmt);
+    return {};
+}
 /*
  4)
  */
-
+double exoPlanetSize(double starSize, float starBright = 1.f,  double exoBright = 0.223)
+{
+    ignoreUnused(starSize, starBright, exoBright);
+    return {};
+}
 /*
  5)
  */
-
+int thoughts(int idea, int inspiration, bool lunch = true)
+{
+    ignoreUnused(idea, inspiration, lunch);
+    return {};
+}
 /*
  6)
  */
-
+void attack(bool currentThreat, bool pastSuccess)
+{
+    ignoreUnused(currentThreat, pastSuccess);
+}
 /*
  7)
  */
-
+int difficulty(int moveCode = 0, int freq = 0, int landRate = 0)
+{
+    ignoreUnused(moveCode, freq, landRate);
+    return {};
+}
 /*
  8)
  */
-
+bool laundry(int sizeOfPile, int mood, int time = 0)
+{
+    ignoreUnused(sizeOfPile, mood, time);
+    return {};
+}
 /*
  9)
  */
-
+int adjustVol(int startVol = 1, int amt = 0)
+{
+    ignoreUnused(startVol, amt);
+    return {};
+}
 /*
  10)
  */
+char lyricRhyme(char endSyllable, char newSyllable)
+{
+    ignoreUnused(endSyllable, newSyllable);
+    return {};
+}
 
 int main()
 {
@@ -117,25 +179,25 @@ int main()
     rentACar(6, 2); 
     
     //1)
-    
+    gps(2, 'N');
     //2)
-    
+    choiceToMake(1, 2);
     //3)
-    
+    recipeConverter(1.5, 2);
     //4)
-    
+    exoPlanetSize(3.2224, 2.0, 3.4);
     //5)
-    
+    thoughts(4, 0, true);
     //6)
-    
+    attack(true, true);
     //7)
-    
+    difficulty(11, 0, 2);
     //8)
-    
+    laundry(1, 2, 0);
     //9)
-    
+    adjustVol(1, 2);
     //10)
-    
+    lyricRhyme('a', 'a');
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
